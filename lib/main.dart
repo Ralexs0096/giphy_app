@@ -5,8 +5,6 @@ void main() {
   runApp(const MyApp());
 }
 
-const Color _customColor = Color(0xFF49149F);
-
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -14,9 +12,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: ThemeData(useMaterial3: true, colorSchemeSeed: _customColor),
-      home: GiphyScreen(),
+      title: 'Giphy App',
+      theme: ThemeData.dark(
+        useMaterial3: true,
+      ),
+      home: const GiphyScreen(),
     );
   }
 }
